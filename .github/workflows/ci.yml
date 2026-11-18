@@ -1,0 +1,31 @@
+name: Viewer build and GLB audit
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install viewer packages
+        run: npm install
+      - name: Check JS syntax and build
+        run: |
+          node --check src/main.js
+          npm run build
+      - name: Audit exported 3D asset
+        run: |
+          python -m pip install numpy scipy trimesh
+          python verify_glb.py
+      - name: Upload built viewer
+        uses: actions/upload-artifact@v4
+        with:
+          name: vite-viewer-build
+          path: dist/

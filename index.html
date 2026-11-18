@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="theme-color" content="#0c0d17" />
   <title>NEON RELIC // Crystal Egg 3D</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <script type="importmap">{
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+  }</script>
 </head>
 <body>
   <main class="app">
@@ -15,7 +22,7 @@
     <section class="workspace">
       <div class="viewport-panel">
         <div class="viewport-topline"><div><strong>MODÈLE INTERACTIF</strong><span> / SOURCE GLB · GÉOMÉTRIE 3D</span></div><div class="chip" id="qualityChip">01 / NEUTRAL</div></div>
-        <div id="viewport"><div class="loading" id="loading"><div class="loading-diamond">◈</div><strong>ASSEMBLAGE DU RELIQUE</strong><small>Chargement de la géométrie, des studs et des cristaux</small></div></div>
+        <div id="viewport"><div class="loading" id="loading"><img class="loading-preview" src="/front.png" alt="Aperçu fixe du GLB en cours de chargement"/><div class="loading-diamond">◈</div><strong>ASSEMBLAGE DU RELIQUE</strong><small>Chargement de la géométrie, des studs et des cristaux</small></div></div>
         <div class="viewport-bottomline"><span>DRAG <strong>ROTATION</strong></span><span>SCROLL <strong>ZOOM</strong></span><span>RIGHT DRAG <strong>PAN</strong></span><span id="shapeCount">— MAILLAGES</span></div>
         <div class="toolbar-title">ANGLES DE CONTRÔLE <small>/ caméra orbitale libre</small></div>
         <div class="view-buttons" role="group" aria-label="Vues du modèle">

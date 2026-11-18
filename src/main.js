@@ -5,7 +5,6 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import './style.css';
 
 // Exported GLB is the single source of truth. No scenery/cameras/lamps/VFX are in it.
 const MODEL_URL = '/models/neon-crystal-egg.glb';

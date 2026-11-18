@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.log
+__pycache__/
+*.pyc
+.glb-upload*
+*_bridge.html
+glb_upload.html
+glb_upload_base64.txt
+models
+reference
+/front.png
+/left.png
+/front_before.png
+/comparison_front.png
+/comparison_left.png
+/all_views.png
