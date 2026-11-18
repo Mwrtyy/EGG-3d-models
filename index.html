@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#0c0d17" />
+  <title>NEON RELIC // Crystal Egg 3D</title>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><div class="brand-glyph">◈</div><div><div class="brand-eyebrow">3D ARTIFACT / STUD SERIES 001</div><h1>NEON <em>CRYSTAL EGG</em></h1></div></div>
+      <div class="status"><span class="status-dot"></span><span id="status">INITIALISATION DU VIEWER</span></div>
+    </header>
+    <section class="workspace">
+      <div class="viewport-panel">
+        <div class="viewport-topline"><div><strong>MODÈLE INTERACTIF</strong><span> / SOURCE GLB · GÉOMÉTRIE 3D</span></div><div class="chip" id="qualityChip">01 / NEUTRAL</div></div>
+        <div id="viewport"><div class="loading" id="loading"><div class="loading-diamond">◈</div><strong>ASSEMBLAGE DU RELIQUE</strong><small>Chargement de la géométrie, des studs et des cristaux</small></div></div>
+        <div class="viewport-bottomline"><span>DRAG <strong>ROTATION</strong></span><span>SCROLL <strong>ZOOM</strong></span><span>RIGHT DRAG <strong>PAN</strong></span><span id="shapeCount">— MAILLAGES</span></div>
+        <div class="toolbar-title">ANGLES DE CONTRÔLE <small>/ caméra orbitale libre</small></div>
+        <div class="view-buttons" role="group" aria-label="Vues du modèle">
+          <button class="view-btn selected" data-view="front">FACE <kbd>1</kbd></button>
+          <button class="view-btn" data-view="left">PROFIL GAUCHE <kbd>2</kbd></button>
+          <button class="view-btn" data-view="back">DOS <kbd>3</kbd></button>
+          <button class="view-btn" data-view="quarter">3/4 <kbd>4</kbd></button>
+          <button class="view-btn" data-view="top">DESSUS <kbd>5</kbd></button>
+        </div>
+      </div>
+      <aside class="details-panel">
+        <div class="detail-head"><span class="detail-kicker">REFERENCE BOARD</span><span class="detail-id">OBJ / 001</span></div>
+        <h2>Le gardien<br/><em>néon.</em></h2>
+        <p class="description">Œuf blindé à studs, cristaux rose électrique et panneaux de lumière cyan. Une reconstruction géométrique complète à partir des deux vues fournies.</p>
+        <div class="reference-tabs" role="tablist"><button class="tab active" data-ref="front">FACE</button><button class="tab" data-ref="left">PROFIL</button></div>
+        <div class="reference-frame"><img id="referenceImg" src="/reference/front.png" alt="Référence image : vue de face"/><div class="reference-caption">PLAN DE RÉFÉRENCE <span id="referenceLabel">01 — FACE</span></div></div>
+        <div class="settings-group"><div class="settings-label">AFFICHAGE / EFFETS</div>
+          <label class="switch-line"><span><strong>VFX néon</strong><small>Halo · particules ancrées · pulse</small></span><input type="checkbox" id="vfxToggle" checked/><span class="switch"></span></label>
+          <label class="switch-line"><span><strong>Rotation automatique</strong><small>Inspection à 360°</small></span><input type="checkbox" id="rotateToggle"/><span class="switch"></span></label>
+          <button id="replayBtn" class="action secondary"><span>↻</span> REJOUER LE PULSE</button>
+        </div>
+        <div class="metadata"><div><span>FORMAT</span><strong>GLB / GLTF 2.0</strong></div><div><span>DIMENSIONS</span><strong>3.90 × 7.20 × 3.55 m</strong></div><div><span>AXE AVANT</span><strong>+Z · Y HAUT</strong></div><div><span>PIVOT PRINCIPAL</span><strong>0 / 0 / 0</strong></div></div>
+        <button class="action primary" id="downloadBtn"><span>↓</span> TÉLÉCHARGER LE GLB <small>↓</small></button>
+        <button class="action secondary" id="reloadBtn"><span>◎</span> RECHARGER & VÉRIFIER LE GLB</button>
+        <div class="test-out" id="testResult" aria-live="polite">Prêt pour une vérification du GLB.</div>
+      </aside>
+    </section>
+    <section class="comparison-section"><div class="section-heading"><div><div class="detail-kicker">VISUAL QUALITY CONTROL</div><h2>VALIDATION <em>VISUELLE.</em></h2></div><p>Rendus produits à partir du GLB exporté puis relu. Effets désactivés ; cadrages fixes pour la comparaison.</p></div>
+      <div class="comparison-grid"><div class="comparison-card"><div class="comparison-title"><span>01</span> RÉFÉRENCE VS MODÈLE — FACE</div><img src="/comparison_front.png" alt="Référence et modèle GLB rechargé, vue de face" loading="lazy"/></div><div class="comparison-card"><div class="comparison-title"><span>02</span> RÉFÉRENCE VS MODÈLE — PROFIL</div><img src="/comparison_left.png" alt="Référence et modèle GLB rechargé, profil trois-quarts" loading="lazy"/></div></div>
+      <div class="section-heading second"><div><div class="detail-kicker">ITERATION 01 → 02</div><h2>AVANT / <em>APRÈS.</em></h2></div><p>Correction ciblée : couronne plus haute, cristaux davantage évasés, studs rapprochés de la coque.</p></div>
+      <div class="comparison-grid compact"><div class="comparison-card"><div class="comparison-title"><span>03</span> PREMIER RENDU</div><img src="/front_before.png" alt="Modèle de première itération" loading="lazy"/></div><div class="comparison-card"><div class="comparison-title"><span>04</span> APRÈS CORRECTION</div><img src="/front.png" alt="Modèle corrigé, GLB rechargé" loading="lazy"/></div></div>
+      <div class="comparison-card contact"><div class="comparison-title"><span>05</span> INSPECTION MULTI-ANGLES : FACE · PROFIL · DOS · 3/4 · DESSUS</div><img src="/all_views.png" alt="Cinq vues fixes du GLB rechargé" loading="lazy"/></div>
+    </section>
+    <footer><span>NEON RELIC / STUDDED EGG / CONSTRUCTION 3D</span><span>ROBLOX-STUDIO : IMPORT NON EFFECTUÉ</span></footer>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
